@@ -32,9 +32,9 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-ol, ul {
-	list-style: none;
-}
+// ol, ul {
+// 	list-style: none;
+// }
 blockquote, q {
 	quotes: none;
 }
@@ -49,11 +49,218 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+@import url('https://fonts.googleapis.com/css?family=Lora|Roboto+Slab&display=swap');
+
+@mainColor: mediumblue;
+@mainFont: 'Roboto Slab', serif;
+@contentFont: 'Lora', serif;
+
+.flex() {
+	display: flex;
+}
+
+.border() {
+	border-bottom: 5px solid @mainColor;
+}
+
 * {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html {
+	height: 100%;
+	font-size: 62.5%;
 }
 
+body {
+	height: 100%;
+	border-left: 480px solid @mainColor;
+	background-color: mintcream;
+	color: @mainColor;
+	padding: 4vh 5% 3vh 5%;
+
+	@media (max-width: 500px) {
+		border: none;
+	}
+}
+
+#entirePage {
+	@media (max-width: 500px) {
+		.flex();
+		flex-direction: column;
+	}
+}
+
+h1 {
+	font-size: 10rem;
+	font-family: @mainFont;
+}
+
+h2 {
+	font-size: 4rem;
+	font-family: @mainFont;
+}
+
+h3 {
+	font-size: 3rem;
+	font-family: @mainFont;
+}
+
+p {
+	font-size: 2rem;
+	font-family: @contentFont;
+}
+
+ul {
+	font-size: 2rem;
+	font-family: @contentFont;
+}
+
+header {
+	top: 0;
+	left: 0;
+	width: 25%;
+	position: fixed;
+	color: white;
+
+	@media (max-width: 500px) {
+		width: 100%;
+	}
+
+	@media (max-width: 500px) {
+		position: static;
+		color: @mainColor;
+	}
+
+	.profileImgDiv img {
+		width: 100%;
+		height: 40vh;
+	}
+
+	.mobileName {
+		display: none;
+
+		@media (max-width: 500px) {
+			display: flex;
+			text-align: center;
+		}
+	}
+
+	.mobileTitle {
+		display: none;
+
+		@media (max-width: 500px) {
+			display: flex;
+			text-align: center;
+			padding: 5% 5% 5% 10%;
+		}
+	}
+
+	nav {
+		padding-top: 3vh;
+		.flex();
+		justify-content: space-around;
+
+		a {
+			font-size: 2rem;
+			color: white;
+			text-decoration: none;
+
+			@media (max-width: 500px) {
+				color: @mainColor;
+			}
+		}
+	}
+	
+	.headerParagraphs {
+		padding: 5% 0;
+		.flex();
+		flex-direction: column;
+		align-items: center;
+
+		.contactWork {
+			.flex();
+			flex-direction: column;
+			align-items: center;
+			padding-top: 1vh;
+
+			p {
+				padding: 3vh 10% 4vh;
+			}
+		}
+	}
+}
+
+.nameSection {
+	.flex();
+	flex-direction: column;
+	align-items: center;
+	.border();
+
+	h1 {
+		@media (max-width: 500px){
+			display: none;
+		}
+	}
+
+	h2 {
+		padding: 3vh 0;
+
+		@media (max-width: 500px) {
+			display: none;
+		}
+
+	}
+}
+
+.introSkills {
+	.flex();
+	justify-content: space-between;
+	padding: 4vh 0 4vh;
+	.border();
+
+	.introDiv {
+		width: 45%;
+
+		p {
+			padding-top: 2vh;
+		}
+	}
+
+	.skillsDiv {
+		width: 45%;
+
+		ul {
+			padding-top: 2vh;
+			padding-left: 4%;
+		}
+	}
+}
+
+.workHistorySection {
+	padding: 4vh 0 4vh;
+
+	.jobBox {
+		padding-top: 3vh;
+		.flex();
+		justify-content: space-between;
+		align-items: center;
+
+		.jobTitleDiv {
+			width: 45%;
+
+			p {
+				padding-top: 2vh;
+			}
+		}
+
+		.jobListDiv {
+			width: 45%;
+
+			ul {
+				padding-left: 4%;
+			}
+		}
+
+	}
+}

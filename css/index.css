@@ -1,1 +1,314 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lora Regular'), local('Lora-Regular'), url(https://fonts.gstatic.com/s/lora/v14/0QIvMX1D_JOuMwr7Jg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v11/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmb2Rm.ttf) format('truetype');
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+body {
+  height: 100%;
+  border-left: 480px solid mediumblue;
+  background-color: mintcream;
+  color: mediumblue;
+  padding: 4vh 5% 3vh 5%;
+}
+@media (max-width: 500px) {
+  body {
+    border: none;
+  }
+}
+@media (max-width: 500px) {
+  #entirePage {
+    display: flex;
+    flex-direction: column;
+  }
+}
+h1 {
+  font-size: 10rem;
+  font-family: 'Roboto Slab', serif;
+}
+h2 {
+  font-size: 4rem;
+  font-family: 'Roboto Slab', serif;
+}
+h3 {
+  font-size: 3rem;
+  font-family: 'Roboto Slab', serif;
+}
+p {
+  font-size: 2rem;
+  font-family: 'Lora', serif;
+}
+ul {
+  font-size: 2rem;
+  font-family: 'Lora', serif;
+}
+header {
+  top: 0;
+  left: 0;
+  width: 25%;
+  position: fixed;
+  color: white;
+}
+@media (max-width: 500px) {
+  header {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    position: static;
+    color: mediumblue;
+  }
+}
+header .profileImgDiv img {
+  width: 100%;
+  height: 40vh;
+}
+header .mobileName {
+  display: none;
+}
+@media (max-width: 500px) {
+  header .mobileName {
+    display: flex;
+    text-align: center;
+  }
+}
+header .mobileTitle {
+  display: none;
+}
+@media (max-width: 500px) {
+  header .mobileTitle {
+    display: flex;
+    text-align: center;
+    padding: 5% 5% 5% 10%;
+  }
+}
+header nav {
+  padding-top: 3vh;
+  display: flex;
+  justify-content: space-around;
+}
+header nav a {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+}
+@media (max-width: 500px) {
+  header nav a {
+    color: mediumblue;
+  }
+}
+header .headerParagraphs {
+  padding: 5% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header .headerParagraphs .contactWork {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1vh;
+}
+header .headerParagraphs .contactWork p {
+  padding: 3vh 10% 4vh;
+}
+.nameSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 5px solid mediumblue;
+}
+@media (max-width: 500px) {
+  .nameSection h1 {
+    display: none;
+  }
+}
+.nameSection h2 {
+  padding: 3vh 0;
+}
+@media (max-width: 500px) {
+  .nameSection h2 {
+    display: none;
+  }
+}
+.introSkills {
+  display: flex;
+  justify-content: space-between;
+  padding: 4vh 0 4vh;
+  border-bottom: 5px solid mediumblue;
+}
+.introSkills .introDiv {
+  width: 45%;
+}
+.introSkills .introDiv p {
+  padding-top: 2vh;
+}
+.introSkills .skillsDiv {
+  width: 45%;
+}
+.introSkills .skillsDiv ul {
+  padding-top: 2vh;
+  padding-left: 4%;
+}
+.workHistorySection {
+  padding: 4vh 0 4vh;
+}
+.workHistorySection .jobBox {
+  padding-top: 3vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.workHistorySection .jobBox .jobTitleDiv {
+  width: 45%;
+}
+.workHistorySection .jobBox .jobTitleDiv p {
+  padding-top: 2vh;
+}
+.workHistorySection .jobBox .jobListDiv {
+  width: 45%;
+}
+.workHistorySection .jobBox .jobListDiv ul {
+  padding-left: 4%;
+}
